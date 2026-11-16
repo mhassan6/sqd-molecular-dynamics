@@ -1,0 +1,6 @@
+numpy
+matplotlib
+pyscf
+qiskit
+qiskit-addon-sqd
+ffsim

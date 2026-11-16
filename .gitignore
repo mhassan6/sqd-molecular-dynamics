@@ -1,0 +1,17 @@
+# Allowlist: ignore everything, then include only the project files.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/requirements.txt
+!/qmd/
+!/examples/
+!/*.png
+!/h2_*_trajectory.npz
+!/h2_sqd_states.txt
+!/h2_sqd_fci_test.txt
+!/MolecularDynamics_Tutorial.ipynb
+!/MolecularDynamics_Tutorial1.ipynb
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

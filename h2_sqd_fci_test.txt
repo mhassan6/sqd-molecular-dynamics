@@ -1,0 +1,47 @@
+# H2/STO-3G: SQD ground states vs FCI
+# Bit conventions: in alpha/beta strings, orbital 0 is the RIGHTMOST bit
+# (bit i set = spatial orbital i occupied). Sampled qiskit bitstrings read
+# beta|alpha (rightmost norb characters = alpha). Energies in hartree,
+# distances in bohr. Amplitudes are the SQD ground-state coefficients; the
+# FCI column is the PySCF FCI vector on the same determinants (sign aligned).
+
+# r = 1.0000 bohr
+E_SQD = -1.0789697692   E_FCI = -1.0789697692   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9971102899   -0.9971102899
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0759675572   +0.0759675572
+
+# r = 1.4000 bohr
+E_SQD = -1.1372759436   E_FCI = -1.1372759436   E_SQD - E_FCI = +1.33e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9936272968   -0.9936272968
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1127155495   +0.1127155495
+
+# r = 2.0000 bohr
+E_SQD = -1.0884963081   E_FCI = -1.0884963081   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9982  1010: 18
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9813070269   -0.9813070269
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1924487438   +0.1924487438
+
+# r = 3.0000 bohr
+E_SQD = -0.9851568244   E_FCI = -0.9851568244   E_SQD - E_FCI = +2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9903  1010: 97
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9203915991   -0.9203915991
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.3909978316   +0.3909978316
+

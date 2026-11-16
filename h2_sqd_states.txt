@@ -1,0 +1,889 @@
+# H2/STO-3G ab initio MD with SQD energies: subspace and ground state at each MD step
+# LUCJ n_reps=1 (CCSD-seeded), StatevectorSampler shots=10000, seed=12345;
+# x0=2.0 bohr, v0=0.0, dt=5.0 a.u., fd_step=0.0001 bohr, mass=1837.1526 m_e
+# Bit conventions: in alpha/beta strings, orbital 0 is the RIGHTMOST bit
+# (bit i set = spatial orbital i occupied). Sampled qiskit bitstrings read
+# beta|alpha (rightmost norb characters = alpha). Energies in hartree,
+# distances in bohr. Amplitudes are the SQD ground-state coefficients; the
+# FCI column is the PySCF FCI vector on the same determinants (sign aligned).
+
+# step 0   t = 0.0000 fs   r = 2.00000000 bohr   v = +0.000000e+00   F = -1.171928e-01
+E_SQD = -1.0884963081   E_FCI = -1.0884963081   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9982  1010: 18
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9813070269   -0.9813070269
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1924487438   +0.1924487438
+
+# step 1   t = 0.1209 fs   r = 1.99920262 bohr   v = -3.189162e-04   F = -1.171663e-01
+E_SQD = -1.0885897449   E_FCI = -1.0885897449   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9982  1010: 18
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9813321661   -0.9813321661
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1923205129   +0.1923205129
+
+# step 2   t = 0.2419 fs   r = 1.99681084 bohr   v = -6.376865e-04   F = -1.170856e-01
+E_SQD = -1.0888698848   E_FCI = -1.0888698848   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9814073946   -0.9814073946
+  01     10      -0.0000000000   -0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1919362545   +0.1919362545
+
+# step 3   t = 0.3628 fs   r = 1.99282575 bohr   v = -9.561591e-04   F = -1.169475e-01
+E_SQD = -1.0893362072   E_FCI = -1.0893362072   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9815321460   -0.9815321460
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1912972723   +0.1912972723
+
+# step 4   t = 0.4838 fs   r = 1.98724925 bohr   v = -1.274170e-03   F = -1.167466e-01
+E_SQD = -1.0899878099   E_FCI = -1.0899878099   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9817054816   -0.9817054816
+  01     10      -0.0000000000   -0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1904057441   +0.1904057441
+
+# step 5   t = 0.6047 fs   r = 1.98008405 bohr   v = -1.591539e-03   F = -1.164750e-01
+E_SQD = -1.0908233583   E_FCI = -1.0908233583   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9819260985   -0.9819260985
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1892647278   +0.1892647278
+
+# step 6   t = 0.7257 fs   r = 1.97133386 bohr   v = -1.908058e-03   F = -1.161227e-01
+E_SQD = -1.0918410121   E_FCI = -1.0918410121   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9821923403   -0.9821923403
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1878781695   +0.1878781695
+
+# step 7   t = 0.8466 fs   r = 1.96100347 bohr   v = -2.223491e-03   F = -1.156768e-01
+E_SQD = -1.0930383294   E_FCI = -1.0930383294   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9825022124   -0.9825022124
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1862509131   +0.1862509131
+
+# step 8   t = 0.9676 fs   r = 1.94909895 bohr   v = -2.537562e-03   F = -1.151219e-01
+E_SQD = -1.0944121473   E_FCI = -1.0944121473   E_SQD - E_FCI = -2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9828533989   -0.9828533989
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1843887095   +0.1843887095
+
+# step 9   t = 1.0885 fs   r = 1.93562785 bohr   v = -2.849950e-03   F = -1.144396e-01
+E_SQD = -1.0959584361   E_FCI = -1.0959584361   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9832432848   -0.9832432848
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1822982251   +0.1822982251
+
+# step 10   t = 1.2094 fs   r = 1.92059945 bohr   v = -3.160278e-03   F = -1.136082e-01
+E_SQD = -1.0976721266   E_FCI = -1.0976721266   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9836689800   -0.9836689800
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1799870487   +0.1799870487
+
+# step 11   t = 1.3304 fs   r = 1.90402507 bohr   v = -3.468105e-03   F = -1.126023e-01
+E_SQD = -1.0995469070   E_FCI = -1.0995469070   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9841273480   -0.9841273480
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1774636947   +0.1774636947
+
+# step 12   t = 1.4513 fs   r = 1.88591840 bohr   v = -3.772918e-03   F = -1.113927e-01
+E_SQD = -1.1015749878   E_FCI = -1.1015749878   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9846150365   -0.9846150365
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1747376032   +0.1747376032
+
+# step 13   t = 1.5723 fs   r = 1.86629589 bohr   v = -4.074115e-03   F = -1.099456e-01
+E_SQD = -1.1037468312   E_FCI = -1.1037468312   E_SQD - E_FCI = -2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9851285119   -0.9851285119
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1718191346   +0.1718191346
+
+# step 14   t = 1.6932 fs   r = 1.84517725 bohr   v = -4.370998e-03   F = -1.082219e-01
+E_SQD = -1.1060508428   E_FCI = -1.1060508428   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9985  1010: 15
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9856640961   -0.9856640961
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1687195592   +0.1687195592
+
+# step 15   t = 1.8142 fs   r = 1.82258591 bohr   v = -4.662752e-03   F = -1.061769e-01
+E_SQD = -1.1084730218   E_FCI = -1.1084730218   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9985  1010: 15
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9862180047   -0.9862180047
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1654510414   +0.1654510414
+
+# step 16   t = 1.9351 fs   r = 1.79854972 bohr   v = -4.948433e-03   F = -1.037592e-01
+E_SQD = -1.1109965680   E_FCI = -1.1109965680   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9986  1010: 14
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9867863876   -0.9867863876
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1620266190   +0.1620266190
+
+# step 17   t = 2.0561 fs   r = 1.77310158 bohr   v = -5.226947e-03   F = -1.009097e-01
+E_SQD = -1.1136014429   E_FCI = -1.1136014429   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9987  1010: 13
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9873653690   -0.9873653690
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1584601783   +0.1584601783
+
+# step 18   t = 2.1770 fs   r = 1.74628025 bohr   v = -5.497026e-03   F = -9.756072e-02
+E_SQD = -1.1162638850   E_FCI = -1.1162638850   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9988  1010: 12
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9879510883   -0.9879510883
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1547664277   +0.1547664277
+
+# step 19   t = 2.2979 fs   r = 1.71813132 bohr   v = -5.757205e-03   F = -9.363443e-02
+E_SQD = -1.1189558823   E_FCI = -1.1189558823   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9989  1010: 11
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9885397390   -0.9885397390
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1509608704   +0.1509608704
+
+# step 20   t = 2.4189 fs   r = 1.68870821 bohr   v = -6.005791e-03   F = -8.904180e-02
+E_SQD = -1.1216446104   E_FCI = -1.1216446104   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9989  1010: 11
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9891276060   -0.9891276060
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1470597803   +0.1470597803
+
+# step 21   t = 2.5398 fs   r = 1.65807341 bohr   v = -6.240832e-03   F = -8.368110e-02
+E_SQD = -1.1242918516   E_FCI = -1.1242918516   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9990  1010: 10
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9897110998   -0.9897110998
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1430801838   +0.1430801838
+
+# step 22   t = 2.6608 fs   r = 1.62629988 bohr   v = -6.460082e-03   F = -7.743671e-02
+E_SQD = -1.1268534260   E_FCI = -1.1268534260   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9990  1010: 10
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9902867868   -0.9902867868
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1390398497   +0.1390398497
+
+# step 23   t = 2.7817 fs   r = 1.59347259 bohr   v = -6.660956e-03   F = -7.017817e-02
+E_SQD = -1.1292786811   E_FCI = -1.1292786811   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9991  1010: 9
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9908514169   -0.9908514169
+  01     10      -0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1349572880   +0.1349572880
+
+# step 24   t = 2.9027 fs   r = 1.55969032 bohr   v = -6.840498e-03   F = -6.175986e-02
+E_SQD = -1.1315101160   E_FCI = -1.1315101160   E_SQD - E_FCI = -2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9991  1010: 9
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9914019451   -0.9914019451
+  01     10      -0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1308517607   +0.1308517607
+
+# step 25   t = 3.0236 fs   r = 1.52506762 bohr   v = -6.995332e-03   F = -5.202166e-02
+E_SQD = -1.1334832484   E_FCI = -1.1334832484   E_SQD - E_FCI = +6.66e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9919355505   -0.9919355505
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1267432981   +0.1267432981
+
+# step 26   t = 3.1445 fs   r = 1.48973700 bohr   v = -7.121632e-03   F = -4.079117e-02
+E_SQD = -1.1351268777   E_FCI = -1.1351268777   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9924496514   -0.9924496514
+  01     10      +0.0000000000   -0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1226527190   +0.1226527190
+
+# step 27   t = 3.2655 fs   r = 1.45385130 bohr   v = -7.215090e-03   F = -2.788807e-02
+E_SQD = -1.1363639471   E_FCI = -1.1363639471   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9929419167   -0.9929419167
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1186016445   +0.1186016445
+
+# step 28   t = 3.3864 fs   r = 1.41758610 bohr   v = -7.270910e-03   F = -1.313144e-02
+E_SQD = -1.1371132578   E_FCI = -1.1371132578   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9934102759   -0.9934102759
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1146124934   +0.1146124934
+
+# step 29   t = 3.5074 fs   r = 1.38114221 bohr   v = -7.283813e-03   F = +3.649309e-03
+E_SQD = -1.1372923304   E_FCI = -1.1372923304   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9993  1010: 7
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9938529267   -0.9938529267
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1107084467   +0.1107084467
+
+# step 30   t = 3.6283 fs   r = 1.34474797 bohr   v = -7.248094e-03   F = +2.259894e-02
+E_SQD = -1.1368217216   E_FCI = -1.1368217216   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9994  1010: 6
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9942683401   -0.9942683401
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1069133665   +0.1069133665
+
+# step 31   t = 3.7493 fs   r = 1.30866126 bohr   v = -7.157717e-03   F = +4.381598e-02
+E_SQD = -1.1356310698   E_FCI = -1.1356310698   E_SQD - E_FCI = +6.66e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9995  1010: 5
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9946552645   -0.9946552645
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1032516577   +0.1032516577
+
+# step 32   t = 3.8702 fs   r = 1.27317080 bohr   v = -7.006473e-03   F = +6.732706e-02
+E_SQD = -1.1336670196   E_FCI = -1.1336670196   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9950127253   -0.9950127253
+  01     10      +0.0000000000   +0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.0997480647   +0.0997480647
+
+# step 33   t = 3.9912 fs   r = 1.23859653 bohr   v = -6.788223e-03   F = +9.305639e-02
+E_SQD = -1.1309029458   E_FCI = -1.1309029458   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9953400202   -0.9953400202
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0964274033   +0.0964274033
+
+# step 34   t = 4.1121 fs   r = 1.20528857 bohr   v = -6.497218e-03   F = +1.207918e-01
+E_SQD = -1.1273500084   E_FCI = -1.1273500084   E_SQD - E_FCI = +1.33e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9956367076   -0.9956367076
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0933142355   +0.0933142355
+
+# step 35   t = 4.2330 fs   r = 1.17362435 bohr   v = -6.128520e-03   F = +1.501505e-01
+E_SQD = -1.1230685397   E_FCI = -1.1230685397   E_SQD - E_FCI = +1.55e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9997  1010: 3
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9959025870   -0.9959025870
+  01     10      +0.0000000000   -0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0904325005   +0.0904325005
+
+# step 36   t = 4.3540 fs   r = 1.14400338 bohr   v = -5.678504e-03   F = +1.805485e-01
+E_SQD = -1.1181781007   E_FCI = -1.1181781007   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9961376714   -0.9961376714
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0878051225   +0.0878051225
+
+# step 37   t = 4.4749 fs   r = 1.11683931 bohr   v = -5.145436e-03   F = +2.111822e-01
+E_SQD = -1.1128638751   E_FCI = -1.1128638751   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9963421499   -0.9963421499
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0854536156   +0.0854536156
+
+# step 38   t = 4.5959 fs   r = 1.09254901 bohr   v = -4.530065e-03   F = +2.410304e-01
+E_SQD = -1.1073765996   E_FCI = -1.1073765996   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9965163435   -0.9965163435
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0833977041   +0.0833977041
+
+# step 39   t = 4.7168 fs   r = 1.07153866 bohr   v = -3.836169e-03   F = +2.688867e-01
+E_SQD = -1.1020232835   E_FCI = -1.1020232835   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9966606569   -0.9966606569
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0816549749   +0.0816549749
+
+# step 40   t = 4.8378 fs   r = 1.05418733 bohr   v = -3.070967e-03   F = +2.934304e-01
+E_SQD = -1.0971468944   E_FCI = -1.0971468944   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9967755268   -0.9967755268
+  01     10      -0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.0802405705   +0.0802405705
+
+# step 41   t = 4.9587 fs   r = 1.04082900 bohr   v = -2.245276e-03   F = +3.133374e-01
+E_SQD = -1.0930952013   E_FCI = -1.0930952013   E_SQD - E_FCI = +1.78e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9968613731   -0.9968613731
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.0791669299   +0.0791669299
+
+# step 42   t = 5.0797 fs   r = 1.03173457 bohr   v = -1.373333e-03   F = +3.274195e-01
+E_SQD = -1.0901818742   E_FCI = -1.0901818742   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9969185547   -0.9969185547
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0784435798   +0.0784435798
+
+# step 43   t = 5.2006 fs   r = 1.02709567 bohr   v = -4.722199e-04   F = +3.347736e-01
+E_SQD = -1.0886459954   E_FCI = -1.0886459954   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9969473333   -0.9969473333
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.0780769783   +0.0780769783
+
+# step 44   t = 5.3215 fs   r = 1.02701237 bohr   v = +4.390820e-04   F = +3.349067e-01
+E_SQD = -1.0886181041   E_FCI = -1.0886181041   E_SQD - E_FCI = +1.33e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9969478477   -0.9969478477
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0780704101   +0.0780704101
+
+# step 45   t = 5.4425 fs   r = 1.03148649 bohr   v = +1.340908e-03   F = +3.278098e-01
+E_SQD = -1.0901005992   E_FCI = -1.0901005992   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9969201004   -0.9969201004
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0784239341   +0.0784239341
+
+# step 46   t = 5.5634 fs   r = 1.04042144 bohr   v = +2.214228e-03   F = +3.139591e-01
+E_SQD = -1.0929673729   E_FCI = -1.0929673729   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9968639574   -0.9968639574
+  01     10      -0.0000000000   -0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.0791343825   +0.0791343825
+
+# step 47   t = 5.6844 fs   r = 1.05362876 bohr   v = +3.041873e-03   F = +2.942448e-01
+E_SQD = -1.0969827671   E_FCI = -1.0969827671   E_SQD - E_FCI = +1.33e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9967791611   -0.9967791611
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0801954113   +0.0801954113
+
+# step 48   t = 5.8053 fs   r = 1.07084017 bohr   v = +3.809490e-03   F = +2.698471e-01
+E_SQD = -1.1018351323   E_FCI = -1.1018351323   E_SQD - E_FCI = +1.33e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9966653556   -0.9966653556
+  01     10      +0.0000000000   +0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.0815976032   +0.0815976032
+
+# step 49   t = 5.9263 fs   r = 1.09172366 bohr   v = +4.506132e-03   F = +2.420879e-01
+E_SQD = -1.1071772278   E_FCI = -1.1071772278   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9965221226   -0.9965221226
+  01     10      +0.0000000000   -0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.0833286219   +0.0833286219
+
+# step 50   t = 6.0472 fs   r = 1.11590148 bohr   v = +5.124450e-03   F = +2.122902e-01
+E_SQD = -1.1126653040   E_FCI = -1.1126653040   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9963490248   -0.9963490248
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0853734192   +0.0853734192
+
+# step 51   t = 6.1682 fs   r = 1.14296816 bohr   v = +5.660546e-03   F = +1.816659e-01
+E_SQD = -1.1179906159   E_FCI = -1.1179906159   E_SQD - E_FCI = +1.55e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9961456560   -0.9961456560
+  01     10      -0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0877144921   +0.0877144921
+
+# step 52   t = 6.2891 fs   r = 1.17250694 bohr   v = +6.113570e-03   F = +1.512438e-01
+E_SQD = -1.1229001505   E_FCI = -1.1229001505   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9998  1010: 2
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9959116908   -0.9959116908
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0903321882   +0.0903321882
+
+# step 53   t = 6.4100 fs   r = 1.20410386 bohr   v = +6.485177e-03   F = +1.218358e-01
+E_SQD = -1.1272062868   E_FCI = -1.1272062868   E_SQD - E_FCI = +2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9956469345   -0.9956469345
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.0932050521   +0.0932050521
+
+# step 54   t = 6.5310 fs   r = 1.23735871 bohr   v = +6.778932e-03   F = +9.403333e-02
+E_SQD = -1.1307871549   E_FCI = -1.1307871549   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9953513674   -0.9953513674
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0963102042   +0.0963102042
+
+# step 55   t = 6.6519 fs   r = 1.27189318 bohr   v = +6.999735e-03   F = +6.822626e-02
+E_SQD = -1.1335804269   E_FCI = -1.1335804269   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9996  1010: 4
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9950251813   -0.9950251813
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.0996237353   +0.0996237353
+
+# step 56   t = 6.7729 fs   r = 1.30735606 bohr   v = +7.153313e-03   F = +4.463232e-02
+E_SQD = -1.1355733489   E_FCI = -1.1355733489   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9995  1010: 5
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9946688086   -0.9946688086
+  01     10      -0.0000000000   -0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1031210993   +0.1031210993
+
+# step 57   t = 6.8938 fs   r = 1.34342631 bohr   v = +7.245799e-03   F = +2.333165e-02
+E_SQD = -1.1367913697   E_FCI = -1.1367913697   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9994  1010: 6
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9942829421   -0.9942829421
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1067774837   +0.1067774837
+
+# step 58   t = 7.0148 fs   r = 1.37981405 bohr   v = +7.283401e-03   F = +4.300797e-03
+E_SQD = -1.1372870512   E_FCI = -1.1372870512   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9993  1010: 7
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9938685463   -0.9938685463
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1105681363   +0.1105681363
+
+# step 59   t = 7.1357 fs   r = 1.41626032 bohr   v = +7.272166e-03   F = -1.255663e-02
+E_SQD = -1.1371302865   E_FCI = -1.1371302865   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9934268626   -0.9934268626
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1144686360   +0.1144686360
+
+# step 60   t = 7.2567 fs   r = 1.45253572 bohr   v = +7.217815e-03   F = -2.738411e-02
+E_SQD = -1.1364003051   E_FCI = -1.1364003051   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9929594099   -0.9929594099
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1184550982   +0.1184550982
+
+# step 61   t = 7.3776 fs   r = 1.48843847 bohr   v = +7.125640e-03   F = -4.035158e-02
+E_SQD = -1.1351795613   E_FCI = -1.1351795613   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9924679807   -0.9924679807
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1225043151   +0.1225043151
+
+# step 62   t = 7.4985 fs   r = 1.52379212 bohr   v = +7.000458e-03   F = -5.163981e-02
+E_SQD = -1.1335493588   E_FCI = -1.1335493588   E_SQD - E_FCI = -1.11e-15   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9992  1010: 8
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9919546360   -0.9919546360
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1265938394   +0.1265938394
+
+# step 63   t = 7.6195 fs   r = 1.55844305 bohr   v = +6.846594e-03   F = -6.142928e-02
+E_SQD = -1.1315869413   E_FCI = -1.1315869413   E_SQD - E_FCI = +2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9991  1010: 9
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9914216972   -0.9914216972
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1307020208   +0.1307020208
+
+# step 64   t = 7.7404 fs   r = 1.59225805 bohr   v = +6.667890e-03   F = -6.989278e-02
+E_SQD = -1.1293637422   E_FCI = -1.1293637422   E_SQD - E_FCI = +6.66e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9991  1010: 9
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9908717375   -0.9908717375
+  01     10      -0.0000000000   +0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1348080113   +0.1348080113
+
+# step 65   t = 7.8614 fs   r = 1.62512195 bohr   v = +6.467739e-03   F = -7.719092e-02
+E_SQD = -1.1269444963   E_FCI = -1.1269444963   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9990  1010: 10
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9903075690   -0.9903075690
+  01     10      -0.0000000000   +0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1388917522   +0.1388917522
+
+# step 66   t = 7.9823 fs   r = 1.65693544 bohr   v = +6.249111e-03   F = -8.346987e-02
+E_SQD = -1.1243869583   E_FCI = -1.1243869583   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9990  1010: 10
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9897322288   -0.9897322288
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1429339541   +0.1429339541
+
+# step 67   t = 8.1033 fs   r = 1.68761306 bohr   v = +6.014604e-03   F = -8.886065e-02
+E_SQD = -1.1217420246   E_FCI = -1.1217420246   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9989  1010: 11
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9891489603   -0.9891489603
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1469160795   +0.1469160795
+
+# step 68   t = 8.2242 fs   r = 1.71708147 bohr   v = +5.766475e-03   F = -9.347940e-02
+E_SQD = -1.1190541026   E_FCI = -1.1190541026   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9989  1010: 11
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9885611904   -0.9885611904
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1508203329   +0.1508203329
+
+# step 69   t = 8.3452 fs   r = 1.74527781 bohr   v = +5.506687e-03   F = -9.742832e-02
+E_SQD = -1.1163616173   E_FCI = -1.1163616173   E_SQD - E_FCI = +2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9988  1010: 12
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9879725037   -0.9879725037
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1546296606   +0.1546296606
+
+# step 70   t = 8.4661 fs   r = 1.77214835 bohr   v = +5.236942e-03   F = -1.007969e-01
+E_SQD = -1.1136975794   E_FCI = -1.1136975794   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9987  1010: 13
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9873866112   -0.9873866112
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1583277611   +0.1583277611
+
+# step 71   t = 8.5870 fs   r = 1.79764724 bohr   v = +4.958712e-03   F = -1.036633e-01
+E_SQD = -1.1110901662   E_FCI = -1.1110901662   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9986  1010: 14
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9868073168   -0.9868073168
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1618991026   +0.1618991026
+
+# step 72   t = 8.7080 fs   r = 1.82173547 bohr   v = +4.673272e-03   F = -1.060957e-01
+E_SQD = -1.1085632845   E_FCI = -1.1085632845   E_SQD - E_FCI = +8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9985  1010: 15
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9862384799   -0.9862384799
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1653289474   +0.1653289474
+
+# step 73   t = 8.8289 fs   r = 1.84437996 bohr   v = +4.381722e-03   F = -1.081533e-01
+E_SQD = -1.1061370996   E_FCI = -1.1061370996   E_SQD - E_FCI = +4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9985  1010: 15
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9856839761   -0.9856839761
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1686033787   +0.1686033787
+
+# step 74   t = 8.9499 fs   r = 1.86555269 bohr   v = +4.085011e-03   F = -1.098879e-01
+E_SQD = -1.1038285218   E_FCI = -1.1038285218   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9851476574   -0.9851476574
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1717093274   +0.1717093274
+
+# step 75   t = 9.0708 fs   r = 1.88523007 bohr   v = +3.783958e-03   F = -1.113444e-01
+E_SQD = -1.1016516467   E_FCI = -1.1016516467   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9846333112   -0.9846333112
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   +0.0000000000
+  10     10      +0.1746345968   +0.1746345968
+
+# step 76   t = 9.1918 fs   r = 1.90339227 bohr   v = +3.479265e-03   F = -1.125620e-01
+E_SQD = -1.0996181499   E_FCI = -1.0996181499   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9841446204   -0.9841446204
+  01     10      -0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1773678838   +0.1773678838
+
+# step 77   t = 9.3127 fs   r = 1.92002272 bohr   v = +3.171538e-03   F = -1.135748e-01
+E_SQD = -1.0977376384   E_FCI = -1.0977376384   E_SQD - E_FCI = -2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9836851243   -0.9836851243
+  01     10      +0.0000000000   +0.0000000000
+  10     01      +0.0000000000   -0.0000000000
+  10     10      +0.1798987946   +0.1798987946
+
+# step 78   t = 9.4336 fs   r = 1.93510765 bohr   v = +2.861293e-03   F = -1.144121e-01
+E_SQD = -1.0960179605   E_FCI = -1.0960179605   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9832581823   -0.9832581823
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1822178556   +0.1822178556
+
+# step 79   t = 9.5546 fs   r = 1.94863565 bohr   v = +2.548974e-03   F = -1.150994e-01
+E_SQD = -1.0944654775   E_FCI = -1.0944654775   E_SQD - E_FCI = -6.66e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9828669397   -0.9828669397
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1843165183   +0.1843165183
+
+# step 80   t = 9.6755 fs   r = 1.96059739 bohr   v = +2.234958e-03   F = -1.156586e-01
+E_SQD = -1.0930853002   E_FCI = -1.0930853002   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9825142957   -0.9825142957
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1861871606   +0.1861871606
+
+# step 81   t = 9.7965 fs   r = 1.97098523 bohr   v = +1.919570e-03   F = -1.161081e-01
+E_SQD = -1.0918814929   E_FCI = -1.0918814929   E_SQD - E_FCI = +2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9822028761   -0.9822028761
+  01     10      +0.0000000000   +0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1878230823   +0.1878230823
+
+# step 82   t = 9.9174 fs   r = 1.97979308 bohr   v = +1.603085e-03   F = -1.164637e-01
+E_SQD = -1.0908572473   E_FCI = -1.0908572473   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9984  1010: 16
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9819350077   -0.9819350077
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1892184995   +0.1892184995
+
+# step 83   t = 10.0384 fs   r = 1.98701609 bohr   v = +1.285744e-03   F = -1.167380e-01
+E_SQD = -1.0900150293   E_FCI = -1.0900150293   E_SQD - E_FCI = -2.22e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9817126976   -0.9817126976
+  01     10      +0.0000000000   -0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1903685354   +0.1903685354
+
+# step 84   t = 10.1593 fs   r = 1.99265052 bohr   v = +9.677531e-04   F = -1.169414e-01
+E_SQD = -1.0893566994   E_FCI = -1.0893566994   E_SQD - E_FCI = -4.44e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9815376146   -0.9815376146
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1912692113   +0.1912692113
+
+# step 85   t = 10.2803 fs   r = 1.99669362 bohr   v = +6.492944e-04   F = -1.170816e-01
+E_SQD = -1.0888836091   E_FCI = -1.0888836091   E_SQD - E_FCI = -8.88e-16   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9983  1010: 17
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9814110746   -0.9814110746
+  01     10      -0.0000000000   -0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1919174370   +0.1919174370
+
+# step 86   t = 10.4012 fs   r = 1.99914347 bohr   v = +3.305322e-04   F = -1.171643e-01
+E_SQD = -1.0885966754   E_FCI = -1.0885966754   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9982  1010: 18
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9813340298   -0.9813340298
+  01     10      -0.0000000000   +0.0000000000
+  10     01      -0.0000000000   -0.0000000000
+  10     10      +0.1923110030   +0.1923110030
+
+# step 87   t = 10.5221 fs   r = 1.99999894 bohr   v = +1.161871e-05   F = -1.171928e-01
+E_SQD = -1.0884964322   E_FCI = -1.0884964322   E_SQD - E_FCI = +0.00e+00   |<SQD|FCI>| = 1.0000000000
+subspace: 2 alpha strings x 2 beta strings = 4 determinants
+sampled bitstrings (beta|alpha): 0101: 9982  1010: 18
+  alpha  beta    SQD amplitude   FCI amplitude
+  01     01      -0.9813070603   -0.9813070603
+  01     10      +0.0000000000   +0.0000000000
+  10     01      -0.0000000000   +0.0000000000
+  10     10      +0.1924485736   +0.1924485736
+
