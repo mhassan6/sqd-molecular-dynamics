@@ -11,6 +11,36 @@ D. A. Fedorov, M. J. Otten, S. K. Gray, Y. Alexeev,
 
 ![H₂ phase space: FCI, B3LYP and SQD](h2_phase_space_comparison.png)
 
+## Development
+
+The code was written with [Claude Code](https://claude.com/claude-code) as an AI pair
+programmer. I Specified the physics, steps, and benchmarks/tests for an AI 
+coding agent (Claude Code) and reviewed its code.
+Results were accepted only after passing independent checks: an analytic oscillator,
+DFT and FCI baselines, and an SQD-versus-FCI comparison at every step.
+
+I also wrote the Jupyter Notebooks (`MolecularDynamics_Tutorial*.ipynb`), without the help of an AI/agent, both as a tutorial
+for others, and as a base from which the AI agent can start.
+
+I designed this project as such:
+
+**Implemented**
+1. Communicate outline and eventual goal (molecular dynamics using sample-based quantum diagonalization) with agent.
+2. Generate library for velocity verlet method.
+3. Calculate molecular dynamics for simple harmonic oscillator potential.
+4. Use velocity verlet method to calculate molecular dynamics for H<sub>2<\sub> dimer using B3LYP DFT energies in the STO-3G basis. Use parameters from the paper.
+6. Use FCI to calculate H<sub>2</sub> dynamics using the same parameters from the paper.
+7. Apply SQD from qiskit-sqd-addon. First make sure you can match the FCI ground state energy at a bond length of 1.4 bohr radius.
+8. Use velocity verlet with SQD energies to calculate dynamics for H2 in minimal basis. Use statevector simulator.
+
+**To be Implemented**
+10. Use my application of Hellmann-Feynman theorem to run a more efficient molecular dynamics simulation. First, use the statevector simulator and make sure that it matches FCI calculations.
+11. Increase basis set to cc-pVDZ. Use FCI to calculate the ground state energy at 1.4 bohr radius. Use SQD with a statevector simulator to calculate ground state energy at the same bond length. Make sure that energies match each other.
+12. In the cc-pVDZ basis set, at a bond length of 1.4 bohr radius, run SQD with a noisy simulator and apply self-consistent configuration recovery. Make sure that the energy converges to what was calculated from FCI / statevector simulator.
+13. Parallelize the self-consistent configuration recovery.
+14. Run a molecular dynamics calculation in the cc-pVDZ basis set using self-consistent configuration recovery parameters which converged the energy at 1.4 bohr radius.
+15. Use IBM Qiskit Runtime to run the molecular dynamics calculations on a real device. First, run SQD calculation at a bond length of 1.4 bohr radius, then use the converged parameters for the molecular dynamics simulation.
+
 ## How it works
 
 The integrator only needs a callable `energy_fn(x) -> float`. Forces come from central
@@ -39,12 +69,7 @@ The SQD energy at each geometry (`qmd/sqd.py`) is computed by:
 
 **Scope.** H₂ in STO-3G has only four determinants and the sampler here is noiseless,
 so SQD recovers the exact answer by construction. This is a validated end-to-end
-pipeline, not a demonstration of quantum advantage. Natural next steps are larger
-molecules/active spaces (where the sampled subspace is truly a subset of the full
-space), shot noise and hardware noise models, and analytic (Hellmann–Feynman) forces.
-
-The bond coordinate uses the hydrogen-atom mass rather than the reduced mass, to match
-the reference paper's setup (~10.5 fs period).
+pipeline, not a demonstration of quantum advantage.
 
 ## Usage
 
@@ -62,16 +87,6 @@ python examples/plot_phase_spaces.py     # comparison figure from saved .npz fil
 
 All quantities are in atomic units (bohr, hartree, electron masses, a.u. of time).
 Outputs (`*.png`, `*_trajectory.npz`, `h2_sqd_states.txt`) are written to the repository root.
-
-`MolecularDynamics_Tutorial*.ipynb` are introductory notebooks on DFT potential-energy
-curves and classical MD for H₂.
-
-## Development
-
-The code was written with [Claude Code](https://claude.com/claude-code) as an AI pair
-programmer. I set the physics, units, and conventions and reviewed the code it wrote.
-Results were accepted only after passing independent checks: an analytic oscillator,
-DFT and FCI baselines, and an SQD-versus-FCI comparison at every step.
 
 ## License
 
