@@ -13,11 +13,12 @@ D. A. Fedorov, M. J. Otten, S. K. Gray, Y. Alexeev,
 
 ## Development
 
-The code was written with [Claude Code](https://claude.com/claude-code) as an AI pair
-programmer. I Specified the physics, steps, and benchmarks/tests for an AI 
-coding agent (Claude Code) and reviewed its code.
+I developed this project as a means of delving into the SQD algorithm and learn how to implement it. Although the use of SQD for ab initio molecular dynamics has already been published (arXiv:2607.28548), I'm developing this code base for future projects and implementations that I'm developing. 
+In this project, I specified the physics, steps, and benchmarks/tests for an AI coding agent (Claude Code) and reviewed its code.
 Results were accepted only after passing independent checks: an analytic oscillator,
 DFT and FCI baselines, and an SQD-versus-FCI comparison at every step.
+The code was written with [Claude Code](https://claude.com/claude-code) as an AI pair
+programmer.
 
 I also wrote the Jupyter Notebooks (`MolecularDynamics_Tutorial*.ipynb`), without the help of an AI/agent, both as a tutorial
 for others, and as a base from which the AI agent can start.
