@@ -29,18 +29,18 @@ I designed this project as such:
 1. Communicate outline and eventual goal (molecular dynamics using sample-based quantum diagonalization) with agent.
 2. Generate library for velocity verlet method.
 3. Calculate molecular dynamics for simple harmonic oscillator potential.
-4. Use velocity verlet method to calculate molecular dynamics for H<sub>2<\sub> dimer using B3LYP DFT energies in the STO-3G basis. Use parameters from the paper.
+4. Use velocity verlet method to calculate molecular dynamics for H<sub>2</sub> dimer using B3LYP DFT energies in the STO-3G basis. Use parameters from the paper.
 6. Use FCI to calculate H<sub>2</sub> dynamics using the same parameters from the paper.
 7. Apply SQD from qiskit-sqd-addon. First make sure you can match the FCI ground state energy at a bond length of 1.4 bohr radius.
 8. Use velocity verlet with SQD energies to calculate dynamics for H2 in minimal basis. Use statevector simulator.
 
 **To be Implemented**
-10. Use my application of Hellmann-Feynman theorem to run a more efficient molecular dynamics simulation. First, use the statevector simulator and make sure that it matches FCI calculations.
-11. Increase basis set to cc-pVDZ. Use FCI to calculate the ground state energy at 1.4 bohr radius. Use SQD with a statevector simulator to calculate ground state energy at the same bond length. Make sure that energies match each other.
-12. In the cc-pVDZ basis set, at a bond length of 1.4 bohr radius, run SQD with a noisy simulator and apply self-consistent configuration recovery. Make sure that the energy converges to what was calculated from FCI / statevector simulator.
-13. Parallelize the self-consistent configuration recovery.
-14. Run a molecular dynamics calculation in the cc-pVDZ basis set using self-consistent configuration recovery parameters which converged the energy at 1.4 bohr radius.
-15. Use IBM Qiskit Runtime to run the molecular dynamics calculations on a real device. First, run SQD calculation at a bond length of 1.4 bohr radius, then use the converged parameters for the molecular dynamics simulation.
+1. Use my application of Hellmann-Feynman theorem to run a more efficient molecular dynamics simulation. First, use the statevector simulator and make sure that it matches FCI calculations.
+2. Increase basis set to cc-pVDZ. Use FCI to calculate the ground state energy at 1.4 bohr radius. Use SQD with a statevector simulator to calculate ground state energy at the same bond length. Make sure that energies match each other.
+3. In the cc-pVDZ basis set, at a bond length of 1.4 bohr radius, run SQD with a noisy simulator and apply self-consistent configuration recovery. Make sure that the energy converges to what was calculated from FCI / statevector simulator.
+4. Parallelize the self-consistent configuration recovery.
+5. Run a molecular dynamics calculation in the cc-pVDZ basis set using self-consistent configuration recovery parameters which converged the energy at 1.4 bohr radius.
+6. Use IBM Qiskit Runtime to run the molecular dynamics calculations on a real device. First, run SQD calculation at a bond length of 1.4 bohr radius, then use the converged parameters for the molecular dynamics simulation.
 
 ## How it works
 
